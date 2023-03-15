@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "WebStol",
+    "slug": "web-stol",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logoSquareWhite.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#88D3EE"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iapps.export"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logoSquareWhite.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.WebStol.WebStol",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8c297881-34c4-4b1b-b078-8e9d63f1cbae"
+      }
+    }
+  }
+}
