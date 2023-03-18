@@ -20,8 +20,11 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.iapps.export"
+      
     },
     "android": {
+      "useNextNotificationsApi": true,
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/logoSquareWhite.png",
         "backgroundColor": "#FFFFFF"
@@ -36,6 +39,16 @@
       "eas": {
         "projectId": "8c297881-34c4-4b1b-b078-8e9d63f1cbae"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ]
   }
 }

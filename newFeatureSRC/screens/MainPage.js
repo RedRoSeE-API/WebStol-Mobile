@@ -9,9 +9,8 @@ import {
   SafeAreaView,
   Dimensions,
 } from "react-native";
-import { app } from "../../firebase";
+import { db } from "../../firebase";
 import {
-  getFirestore,
   doc,
   updateDoc,
   collection,
@@ -24,10 +23,9 @@ import useAuth from "../useAuth";
 import { BlurView } from "expo-blur";
 
 
-const db = getFirestore(app);
-const dbUsersUIDcollection = collection(db, "usersUID");
-const dbMealsCollection = collection(db, "meals");
-const dbInfoCollection = collection(db, "dbInfo");
+const dbUsersUIDcollection = db.collection("usersUID");
+const dbMealsCollection = db.collection("meals");
+const dbInfoCollection = db.collection("dbInfo");
 
 const MainPage = () => {
 
@@ -99,7 +97,7 @@ const MainPage = () => {
     }
   }, [GetUserInfoTextIsLoading, GetMealsTodayIsLoading, GetPriceIsLoading]);
 
-  
+
 
   const getDayToday = async () => {
     const docRef = doc(dbInfoCollection, "time");
@@ -135,7 +133,7 @@ const MainPage = () => {
   };
 
   const pressYES = () => {
-    const docRef = doc(dbUsersUIDcollection, user.uid);
+    const docRef = doc(dbUsersUIDcollection, `${user.uid}`);
 
     getDoc(docRef)
       .then((res) => {
@@ -164,7 +162,7 @@ const MainPage = () => {
   };
 
   const pressNO = () => {
-    const docRef = doc(dbUsersUIDcollection, user.uid);
+    const docRef = doc(dbUsersUIDcollection, `${user.uid}`);
 
     getDoc(docRef)
       .then((res) => {
@@ -187,7 +185,7 @@ const MainPage = () => {
   };
 
   function GetUserInfoText() {
-    const docRef = doc(dbUsersUIDcollection, user.uid);
+    const docRef = doc(dbUsersUIDcollection, `${user.uid}`);
 
     getDoc(docRef)
       .then((res) => {
@@ -273,7 +271,7 @@ const MainPage = () => {
   }
 
   function GetPrice() {
-    const docRefUser = doc(dbUsersUIDcollection, user.uid);
+    const docRefUser = doc(dbUsersUIDcollection, `${user.uid}`);
     const docRefDBInfo = doc(dbInfoCollection, "monthReport");
 
     let docRefPrice;

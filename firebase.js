@@ -30,5 +30,10 @@ const app = firebase.initializeApp({
 
 
 const db = firebase.firestore();
+db.settings({
+    experimentalForceLongPolling: true, // this line
+    useFetchStreams: false, // and this line
+    merge: true
+  });
 const auth = getAuth();
 export {db, auth, app} ;
