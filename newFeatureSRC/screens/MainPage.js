@@ -409,7 +409,7 @@ const MainPage = () => {
                   start={{ x: 0, y: 0 }}
                   end={{ x: 0, y: 1 }}
                 >
-                  <Text style={styles.willYouEatText}>Ще куче ли утре?</Text>
+                  <Text style={styles.willYouEatText}>Ще обядваш ли утре?</Text>
                 </LinearGradient>
                 <LinearGradient
                   colors={[
