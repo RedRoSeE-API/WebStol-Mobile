@@ -320,7 +320,7 @@ const MainPage = () => {
           end={{ x: 0, y: 1 }}
         >
           <Text style={styles.price}>
-            Цена за еденично ядене: {(1 * priceForOneMeal).toFixed(2)}лв.
+            Цена за единично ядене: {(1 * priceForOneMeal).toFixed(2)}лв.
           </Text>
         </LinearGradient>
         <LinearGradient

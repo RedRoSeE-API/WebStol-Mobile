@@ -208,6 +208,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 28,
     color: Colors.textColor,
+    textAlign: "center",
   },
   logInTextLinear: {
     width: 350,
@@ -316,6 +317,7 @@ alignItems:"center",
     fontWeight: "bold",
     fontSize: 28,
     color: Colors.textColor,
+    textAlign: "center",
   },
   logInTextLinear: {
     width: 330,

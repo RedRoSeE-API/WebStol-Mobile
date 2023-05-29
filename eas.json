@@ -9,10 +9,8 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk"
-      }
+      "distribution": "internal"
+      
     },
     "preview2": {
       "android": {
@@ -32,6 +30,10 @@
     "production": {}
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./androidCerts/pc-api-8292905083654989038-221-57681636041c.json"
+      }
+    }
   }
 }
